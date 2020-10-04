@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms" 
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:emredeisgn.Views"
+       Title="emredeisgn"
+       x:Class="emredeisgn.AppShell">
+
+    <!--
+        The overall app visual hierarchy is defined here, along with navigation.
+    
+        https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/
+    -->
+
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Color x:Key="NavigationPrimary">White</Color>
+            <Style x:Key="BaseStyle" TargetType="Element">
+                <Setter Property="Shell.BackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.ForegroundColor" Value="#44C7B3" />
+                <Setter Property="Shell.TitleColor" Value="#44C7B3" />
+                <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
+                <Setter Property="Shell.UnselectedColor" Value="DarkGray" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource NavigationPrimary}" />
+                <Setter Property="Shell.TabBarForegroundColor" Value="#44C7B3"/>
+                <Setter Property="Shell.TabBarUnselectedColor" Value="DarkGray"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="#44C7B3"/>
+            </Style>
+            <Style TargetType="TabBar" BasedOn="{StaticResource BaseStyle}" />
+            <Style TargetType="FlyoutItem" BasedOn="{StaticResource BaseStyle}" />
+        </ResourceDictionary>
+    </Shell.Resources>
+
+    <TabBar>
+        <Tab Title="Place List" Icon="Group.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ListPage}" />
+        </Tab>
+        <Tab Title="Map" Icon="map.png">
+            <ShellContent ContentTemplate="{DataTemplate local:MapPage}" />
+        </Tab>
+        <Tab Title="About" Icon="Profile.png">
+            <ShellContent ContentTemplate="{DataTemplate local:ProfilePage}" />
+        </Tab>
+        
+        
+    </TabBar>
+
+   
+
+
+</Shell>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodel="clr-namespace:emredeisgn.Views"
+             x:Class="emredeisgn.Views.ListPage"
+            Shell.NavBarIsVisible="False">
+    <ContentPage.BindingContext>
+        <viewmodel:ListViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#F2F2F2">
+            <StackLayout Margin="10,15,0,0">
+                <Label Text="Nearby Place" TextColor="Black" FontSize="Large" FontAttributes="Bold" />
+            </StackLayout>
+
+            <StackLayout Margin="10">
+
+                <Frame BackgroundColor="#44c7b3" Margin="0" Padding="0" HeightRequest="115" HorizontalOptions="FillAndExpand" CornerRadius="10">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding navToDetail}" NumberOfTapsRequired="1"/>
+                    </Frame.GestureRecognizers>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.5*"/>
+                            <ColumnDefinition Width="3*"/>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout  Padding="0" Grid.Column="0">
+                            <Frame Margin="10" VerticalOptions="CenterAndExpand" Padding="0" HeightRequest="90" WidthRequest="110">
+                                <Image Source="https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg" Aspect="AspectFill"/>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout  Margin="10" Grid.Column="1">
+                            <Label Text="Eiffel Tower" TextColor="White" FontSize="Medium" FontAttributes="Bold"/>
+                            <Label Text="The Eiffel Tower is a wrought-iron lattice tower" TextColor="White" FontSize="Small" />
+                            <Label Text="21KM" TextColor="ForestGreen" FontSize="Small" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </Grid>
+                          
+                </Frame>
+
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

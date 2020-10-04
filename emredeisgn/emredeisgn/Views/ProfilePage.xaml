@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="emredeisgn.Views.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+           
+                <StackLayout VerticalOptions="FillAndExpand">
+
+                    <StackLayout Margin="20">
+                        <Label Text="About us" TextColor="Black" FontSize="30" FontAttributes="Bold"/>
+                        <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et ligula quam. Duis sit amet neque sem." TextColor="DarkGray" FontSize="Medium"/>
+                    </StackLayout>
+
+
+                    <StackLayout Margin="20" VerticalOptions="EndAndExpand">
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Frame BackgroundColor="#44C7B3" CornerRadius="30" HeightRequest="50" WidthRequest="50" Padding="0" Margin="0">
+                            
+                        </Frame>
+
+                            <Button Text="WebSite" BackgroundColor="#44C7B3" HorizontalOptions="FillAndExpand" TextColor="White" CornerRadius="20" />
+
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                            <Frame BackgroundColor="#44C7B3" CornerRadius="30" HeightRequest="50" WidthRequest="50" Padding="0" Margin="0">
+
+                            </Frame>
+
+                            <Button Text="WebSite" BackgroundColor="#44C7B3" HorizontalOptions="FillAndExpand" TextColor="White" CornerRadius="20" />
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </StackLayout>
+
+
+
+           
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
